@@ -1,7 +1,8 @@
-const dishes = {
+const menuView = {
   init(data) {
     this.dishes = document.getElementsByClassName('dishes')[0];
-    this.data = data;
+    console.log(data);
+    console.log('in view');
     this.render();
   },
   render() {
@@ -136,4 +137,4 @@ const dishes = {
   },
 };
 
-export { dishes };
+export { menuView };

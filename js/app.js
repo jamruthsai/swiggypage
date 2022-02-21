@@ -1,6 +1,5 @@
-import { menuController } from './components/menuController.js';
+import { menuController } from './components/menuList/menuController.js';
 
 window.addEventListener('DOMContentLoaded', (event) => {
-  console.log('DOM fully loaded and parsed');
   menuController.init();
 });
