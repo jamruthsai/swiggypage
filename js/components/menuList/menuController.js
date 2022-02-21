@@ -6,11 +6,10 @@ const menuController = {
   },
   async getData() {
     const menuList = await menuModel.loadData();
-    console.log(menuList);
-    this.renderData();
+    this.renderData(menuList);
   },
-  renderData() {
-    menuView.init(this.data);
+  renderData(menuList) {
+    menuView.init(menuList);
   },
 };
 
