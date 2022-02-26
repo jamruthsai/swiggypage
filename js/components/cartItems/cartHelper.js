@@ -39,7 +39,7 @@ function buildCart(cartItems) {
 function buildCartHeader(len) {
   let header = ` <div>
           <h1>Cart</h1>
-          <p>${len} Items</p>
+          <p>${len} ${len == 1 ? 'Item' : 'Items'}</p>
         </div>`;
   return header;
 }
@@ -58,7 +58,7 @@ function buildCartItems(dishes) {
                 <span class="quantity">${dish.quantity}</span>
                 <span class="increase"> + </span>
             </button>
-          </div>;
+          </div>
           `;
   });
   return items;

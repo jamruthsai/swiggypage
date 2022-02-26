@@ -22,8 +22,10 @@ const cartView = {
     let dish = cartController.getDish(dishId);
     if (operation === 'increase') {
       cartController.addToCart(dish);
+      cartController.sendQuantityToMenu(dishId, operation);
     } else if (operation === 'decrease') {
       cartController.deleteFromCart(dishId);
+      cartController.sendQuantityToMenu(dishId, operation);
     }
   },
 };

@@ -23,7 +23,6 @@ const menuView = {
       });
   },
   handleEvent(event) {
-    console.log(event.target);
     if (event.target.innerHTML === 'Add') {
       const className = event.target.parentElement.className;
       const dishId = className.split(' ')[1];
@@ -45,6 +44,14 @@ const menuView = {
           menuController.deleteFromCart(dishId);
         }
       }
+    }
+  },
+  updateQuantities(dishId, operation, quantity) {
+    let className = `dish ${dishId}`;
+    if (operation === 'increase') {
+      changeQuantities(quantity, className);
+    } else {
+      changeQuantities(quantity, className);
     }
   },
 };

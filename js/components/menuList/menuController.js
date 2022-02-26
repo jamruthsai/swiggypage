@@ -22,6 +22,10 @@ const menuController = {
   getQuantity(dishId) {
     return cartController.getQuantity(dishId);
   },
+  updateQuantities(dishId, operation) {
+    let quantity = this.getQuantity(dishId);
+    menuView.updateQuantities(dishId, operation, quantity);
+  },
 };
 
 export { menuController };

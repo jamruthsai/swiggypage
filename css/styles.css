@@ -250,10 +250,6 @@ header .navbar ul li a:hover {
   width: max-content;
 }
 
-.cart {
-  float: left;
-}
-
 .cartIcon {
   width: 20px;
   height: 20px;
