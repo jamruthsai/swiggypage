@@ -27,19 +27,42 @@ function dishImageBuilder(dish) {
   return `<img src="../../../images/nonveg.png" alt="non-veg" class="icon">`;
 }
 
-function buttonBuilder(dish) {
-  const button = `<div class="${'dish ' + dish.id}">
+function buttonBuilder() {
+  const button = `
                 <button class="secondaryButton" >Add</button>
-              </div>`;
+             `;
   return button;
 }
+
+function buttonWithQuantityBuilder(quantity) {
+  const button = `
+                <button class="secondaryButton" >
+                  <span class="decrease"> - </span>
+                  <span class="quantity">${quantity}</span>
+                  <span class="increase"> + </span>
+                </button>
+              `;
+  return button;
+}
+
+function changeQuantities(quantity, className) {
+  let button =
+    quantity == 0 ? buttonBuilder() : buttonWithQuantityBuilder(quantity);
+  let targetDishes = document.getElementsByClassName(className);
+  for (let i = 0; i < targetDishes.length; i++) {
+    targetDishes[i].innerHTML = button;
+  }
+}
+
 function dishBuilder(category, dishes) {
   let menu = ``;
   for (let dish of dishes) {
     menu += `
     <div class="dish b-bt-05">
         ${dishDetailsBuilder(dish)}
+        <div class="${'dish ' + dish.id}">
         ${buttonBuilder(dish)}
+        </div>
     </div>
     `;
   }
@@ -53,4 +76,4 @@ function dishBuilder(category, dishes) {
   return categories;
 }
 
-export { dishBuilder };
+export { dishBuilder, changeQuantities };

@@ -16,6 +16,12 @@ const menuController = {
     const dish = menuModel.getDish(dishId);
     cartController.addToCart(dish);
   },
+  deleteFromCart(dishId) {
+    cartController.deleteFromCart(dishId);
+  },
+  getQuantity(dishId) {
+    return cartController.getQuantity(dishId);
+  },
 };
 
 export { menuController };

@@ -13,8 +13,15 @@ const cartController = {
     cartView.init(this.cartItems);
   },
   addToCart(dish) {
-    cartModel.addNewDish(dish);
+    cartModel.addDish(dish);
     this.getData();
+  },
+  deleteFromCart(dishId) {
+    cartModel.deleteDish(dishId);
+    this.getData();
+  },
+  getQuantity(dishId) {
+    return cartModel.getQuantity(dishId);
   },
 };
 

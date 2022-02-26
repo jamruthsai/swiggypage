@@ -190,6 +190,8 @@ header .navbar ul li a:hover {
 }
 
 .secondaryButton {
+  display: flex;
+  justify-content: space-evenly;
   width: 90px;
   height: 100%;
   background-color: transparent;
@@ -243,6 +245,11 @@ header .navbar ul li a:hover {
   max-width: 218px;
 }
 
+.increase,
+.decrease {
+  width: max-content;
+}
+
 .cart {
   float: left;
 }
@@ -251,14 +258,4 @@ header .navbar ul li a:hover {
   width: 20px;
   height: 20px;
   margin-right: 10px;
-}
-
-.quantity {
-  width: 70px;
-  border: 0.5px solid black;
-  text-align: center;
-  font-size: 15px;
-  margin-right: 10px;
-  cursor: pointer;
-  transition: all 0.2s;
 }

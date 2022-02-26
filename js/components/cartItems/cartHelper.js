@@ -51,13 +51,13 @@ function buildCartItems(dishes) {
             ${dishImageBuilder(dish)}
             <div>
               <h3>${dish.name}</h3>
-              <p>${dish.price}</p>
+              <p>${dish.subTotal}</p>
             </div>
-            <div class="quantity">
-              <span class="#sub">-</span>
-              <span>1</span>
-              <span class="#add">+</span>
-            </div>
+            <button class="secondaryButton" >
+                  <span class="decrease"> - </span>
+                  <span class="quantity">${dish.quantity}</span>
+                  <span class="increase"> + </span>
+            </button>
           </div>;
           `;
   });
