@@ -10,8 +10,11 @@ const cartController = {
     this.renderData();
   },
   renderData() {
-    console.log(this.cartItems);
     cartView.init(this.cartItems);
+  },
+  addToCart(dish) {
+    cartModel.addNewDish(dish);
+    this.getData();
   },
 };
 

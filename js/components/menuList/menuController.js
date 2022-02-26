@@ -1,5 +1,6 @@
 import { menuModel } from './menuModel.js';
 import { menuView } from './menuView.js';
+import { cartController } from '../cartItems/cartController.js';
 const menuController = {
   init() {
     this.getData();
@@ -10,6 +11,10 @@ const menuController = {
   },
   renderData(menuList) {
     menuView.init(menuList);
+  },
+  addToCart(dishId) {
+    const dish = menuModel.getDish(dishId);
+    cartController.addToCart(dish);
   },
 };
 

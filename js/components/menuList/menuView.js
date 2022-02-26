@@ -1,4 +1,5 @@
 import { dishBuilder } from './menuHelper.js';
+import { menuController } from './menuController.js';
 
 const menuView = {
   dishes: {},
@@ -23,7 +24,7 @@ const menuView = {
   },
   addDishToCart(event) {
     const dishId = event.target.parentElement.className.split(' ')[1];
-    console.log(dishId);
+    menuController.addToCart(dishId);
   },
 };
 

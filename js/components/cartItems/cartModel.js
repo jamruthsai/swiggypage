@@ -16,6 +16,11 @@ const cartModel = {
   getData() {
     return this.data;
   },
+  addNewDish(dish) {
+    this.data.dishes.push(dish);
+    this.data.total += dish.price;
+    this.data.totalItems += 1;
+  },
 };
 
 export { cartModel };
