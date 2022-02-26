@@ -5,6 +5,7 @@ const menuView = {
   init(data) {
     this.dishes = data;
     this.render();
+    this.initListeners();
   },
   render() {
     let menuList = ``;
@@ -12,6 +13,17 @@ const menuView = {
       menuList += dishBuilder(category, this.dishes[category]);
     }
     document.querySelector('.dishes').innerHTML = menuList;
+  },
+  initListeners() {
+    document
+      .getElementsByClassName('dishes')[0]
+      .addEventListener('click', (event) => {
+        this.addDishToCart(event);
+      });
+  },
+  addDishToCart(event) {
+    const dishId = event.target.parentElement.className.split(' ')[1];
+    console.log(dishId);
   },
 };
 

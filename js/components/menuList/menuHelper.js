@@ -1,6 +1,6 @@
 function categoryHeaderBuilder(category, dishes) {
   const header = `
- <div class="person">
+ <div>
     <h2>
         ${category}
     </h2>
@@ -27,20 +27,19 @@ function dishImageBuilder(dish) {
   return `<img src="../../../images/nonveg.png" alt="non-veg" class="icon">`;
 }
 
-function buttonBuilder() {
-  const button = `<div>
-                <button class="secondaryButton">Add</button>
+function buttonBuilder(dish) {
+  const button = `<div class="${'dish ' + dish.id}">
+                <button class="secondaryButton" >Add</button>
               </div>`;
   return button;
 }
-
 function dishBuilder(category, dishes) {
   let menu = ``;
   for (let dish of dishes) {
     menu += `
     <div class="dish b-bt-05">
         ${dishDetailsBuilder(dish)}
-        ${buttonBuilder()}
+        ${buttonBuilder(dish)}
     </div>
     `;
   }
