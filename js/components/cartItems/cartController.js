@@ -4,13 +4,14 @@ const cartController = {
   cartItems: {},
   init() {
     this.getData();
+    cartView.init();
   },
   getData() {
     this.cartItems = cartModel.getData();
     this.renderData();
   },
   renderData() {
-    cartView.init(this.cartItems);
+    cartView.render(this.cartItems);
   },
   addToCart(dish) {
     cartModel.addDish(dish);
@@ -22,6 +23,9 @@ const cartController = {
   },
   getQuantity(dishId) {
     return cartModel.getQuantity(dishId);
+  },
+  getDish(dishId) {
+    return cartModel.getDish(dishId);
   },
 };
 

@@ -1,8 +1,7 @@
 import { buildCart } from './cartHelper.js';
-
+import { cartController } from './cartController.js';
 const cartView = {
-  init(cartItems) {
-    this.render(cartItems);
+  init() {
     this.initListeners();
   },
   render(cartItems) {
@@ -13,11 +12,19 @@ const cartView = {
     document
       .getElementsByClassName('cart')[0]
       .addEventListener('click', (event) => {
-        console.log(event.target);
+        this.handleEvent(event);
       });
   },
   handleEvent(event) {
-    console.log(event.target);
+    let dishId = event.target.parentElement.id;
+    let operation = event.target.className;
+    console.log(dishId, operation);
+    let dish = cartController.getDish(dishId);
+    if (operation === 'increase') {
+      cartController.addToCart(dish);
+    } else if (operation === 'decrease') {
+      cartController.deleteFromCart(dishId);
+    }
   },
 };
 

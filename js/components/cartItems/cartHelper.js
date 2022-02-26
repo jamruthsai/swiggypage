@@ -53,10 +53,10 @@ function buildCartItems(dishes) {
               <h3>${dish.name}</h3>
               <p>${dish.subTotal}</p>
             </div>
-            <button class="secondaryButton" >
-                  <span class="decrease"> - </span>
-                  <span class="quantity">${dish.quantity}</span>
-                  <span class="increase"> + </span>
+            <button id="${dish.id}" class="secondaryButton" >
+                <span class="decrease"> - </span>
+                <span class="quantity">${dish.quantity}</span>
+                <span class="increase"> + </span>
             </button>
           </div>;
           `;
