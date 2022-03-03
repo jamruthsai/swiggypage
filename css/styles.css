@@ -250,6 +250,13 @@ header .navbar ul li a:hover {
   width: max-content;
 }
 
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .cartIcon {
   width: 20px;
   height: 20px;

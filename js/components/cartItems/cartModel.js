@@ -56,6 +56,13 @@ const cartModel = {
     });
     return targetDish;
   },
+  clearCart() {
+    // Store the data in localStorage
+    localStorage.setItem('cart', JSON.stringify(this.data));
+    this.data.dishes = [];
+    this.data.total = 0;
+    this.data.totalItems = 0;
+  },
 };
 
 export { cartModel };

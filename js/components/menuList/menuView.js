@@ -19,32 +19,11 @@ const menuView = {
     document
       .getElementsByClassName('dishes')[0]
       .addEventListener('click', (event) => {
-        this.handleEvent(event);
+        menuController.handleEvent(event);
       });
   },
-  handleEvent(event) {
-    if (event.target.innerHTML === 'Add') {
-      const className = event.target.parentElement.className;
-      const dishId = className.split(' ')[1];
-      menuController.addToCart(dishId);
-      changeQuantities(1, className);
-    } else {
-      // const quantity = parseInt(event.target.innerHTML);
-      const operation = event.target.className;
-      if (operation == 'increase' || operation == 'decrease') {
-        const className = event.target.parentElement.parentElement.className;
-        console.log(operation, className);
-        const dishId = className.split(' ')[1];
-        const quantity = menuController.getQuantity(dishId);
-        if (operation === 'increase') {
-          changeQuantities(quantity + 1, className);
-          menuController.addToCart(dishId);
-        } else {
-          changeQuantities(quantity - 1, className);
-          menuController.deleteFromCart(dishId);
-        }
-      }
-    }
+  changeAllDishesQuantities(quantity, className) {
+    changeQuantities(quantity, className);
   },
   updateQuantities(dishId, operation, quantity) {
     let className = `dish ${dishId}`;

@@ -12,21 +12,8 @@ const cartView = {
     document
       .getElementsByClassName('cart')[0]
       .addEventListener('click', (event) => {
-        this.handleEvent(event);
+        cartController.handleEvent(event);
       });
-  },
-  handleEvent(event) {
-    let dishId = event.target.parentElement.id;
-    let operation = event.target.className;
-    console.log(dishId, operation);
-    let dish = cartController.getDish(dishId);
-    if (operation === 'increase') {
-      cartController.addToCart(dish);
-      cartController.sendQuantityToMenu(dishId, operation);
-    } else if (operation === 'decrease') {
-      cartController.deleteFromCart(dishId);
-      cartController.sendQuantityToMenu(dishId, operation);
-    }
   },
 };
 

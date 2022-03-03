@@ -14,6 +14,33 @@ const cartController = {
   renderData() {
     cartView.render(this.cartItems);
   },
+  handleEvent(event) {
+    if (event.target.innerHTML === 'Checkout') {
+      this.checkout();
+    } else {
+      this.addOrDeleteToCart(event);
+    }
+  },
+  addOrDeleteToCart(event) {
+    let dishId = event.target.parentElement.id;
+    let operation = event.target.className;
+    let dish = this.getDish(dishId);
+    if (operation === 'increase') {
+      this.addToCart(dish);
+      this.sendQuantityToMenu(dishId, operation);
+    } else if (operation === 'decrease') {
+      this.deleteFromCart(dishId);
+      this.sendQuantityToMenu(dishId, operation);
+    }
+  },
+  checkout() {
+    this.clearCart();
+  },
+  clearCart() {
+    cartModel.clearCart();
+    menuController.clearCart();
+    this.getData();
+  },
   addToCart(dish) {
     cartModel.addDish(dish);
     this.getData();
