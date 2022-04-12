@@ -1,0 +1,96 @@
+{
+  "recommended": [
+    {
+      "id": "0",
+      "name": "Veg Platter",
+      "price": 699,
+      "isVeg": true,
+      "description": "An authentic veg platter with 3 pieces of Paneer Achari, 3 pieces of Hara Bhara, 3 pieces of Veg Seekh and 3 pieces of Malai Chaap."
+    },
+    {
+      "id": "1",
+      "name": "Non Veg Platter",
+      "price": 899,
+      "isVeg": false,
+      "description": "An authentic non veg platter with 3 pieces of Barnala Mathi Chicken Tikka, 3 pieces of Dhaniya Chicken, 3 pieces of Tawa Chicken and 3 pieces of Chicken Kebab."
+    },
+    {
+      "id": "2",
+      "name": "Dhaniya Chicken Tikka",
+      "price": 249,
+      "isVeg": false,
+      "description": "Succulent chicken marinated & flavoured with fresh coriander, grilled to perfection."
+    },
+    {
+      "id": "3",
+      "name": "Premium Paneer Butter Masala Roti Thali",
+      "price": 270,
+      "isVeg": true,
+      "description": "Paneer Butter Masala , 2 Nos Roti , 2 pcs Paneer Tikka served with pickle , raita ,gulab jamun , Green Chutney & Salad"
+    }
+  ],
+  "platters": [
+    {
+      "id": "0",
+      "name": "Veg Platter",
+      "price": 699,
+      "isVeg": true,
+      "description": "An authentic veg platter with 3 pieces of Paneer Achari, 3 pieces of Hara Bhara, 3 pieces of Veg Seekh and 3 pieces of Malai Chaap."
+    },
+    {
+      "id": "1",
+      "name": "Non Veg Platter",
+      "price": 899,
+      "isVeg": false,
+      "description": "An authentic non veg platter with 3 pieces of Barnala Mathi Chicken Tikka, 3 pieces of Dhaniya Chicken, 3 pieces of Tawa Chicken and 3 pieces of Chicken Kebab."
+    },
+    {
+      "id": "4",
+      "name": "Mixed Platter",
+      "price": 799,
+      "isVeg": false,
+      "description": "An authentic mixed platter with 3 pieces of Barnala Methi Chicken, 3 pieces of Chicken Kebab, 3 pieces of Hara Bhara and 3 pieces of Paneer Tikka."
+    }
+  ],
+  "starters": [
+    {
+      "id": "2",
+      "name": "Dhaniya Chicken Tikka",
+      "price": 249,
+      "isVeg": false,
+      "description": "Succulent chicken marinated & flavoured with fresh coriander, grilled to perfection."
+    },
+    {
+      "id": "5",
+      "name": "Achari Paneer Tikka",
+      "price": 239,
+      "isVeg": true,
+      "description": "Slow Cooked Paneer Tikka in Achari Marination"
+    },
+    {
+      "id": "6",
+      "name": "Chicken Kabab",
+      "price": 249,
+      "isVeg": false,
+      "description": "Chicken pieces marinated in traditional spices and perfectly oil fried - Bengaluru style."
+    }
+  ],
+  "maincourse": [
+    {
+      "id": "7",
+      "name": "Chiken Tikka Masala",
+      "price": 249,
+      "isVeg": false,
+      "description": "Roasted and marinated chicken cooked in a spicy gravy."
+    }
+  ],
+  "familypack": [
+    {
+      "id": "3",
+      "name": "Premium Paneer Butter Masala Roti Thali",
+      "price": 270,
+      "isVeg": true,
+      "description": "Paneer Butter Masala , 2 Nos Roti , 2 pcs Paneer Tikka served with pickle , raita ,gulab jamun , Green Chutney & Salad"
+    }
+  ]
+}
